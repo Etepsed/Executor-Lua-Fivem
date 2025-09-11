@@ -19,4 +19,5 @@ files({
 	"html/editor.js",
 	"html/events.js",
 	"html/completions.js",
+	"html/theme.js",
 })

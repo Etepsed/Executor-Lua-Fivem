@@ -9,14 +9,21 @@
   </head>
   <body>
     <div class="frame">
-      <div
-        id="editor"
-        style="height: 300px; width: 100%; border: 1px solid #555"
-      ></div>
+      <div class="buttons" style="justify-content: right">
+        <select id="themeSelector" class="theme_selector">
+          <option value="default">Black (Padrão)</option>
+          <option value="theme-dark-blue">Dark Blue</option>
+          <option value="theme-light">Light</option>
+          <option value="theme-copper">Copper</option>
+        </select>
+
+        <button id="closeBtn">X</button>
+      </div>
+
+      <div id="editor"></div>
       <div class="buttons">
         <button id="runBtn">Executar</button>
         <button id="stopBtn">Resetar</button>
-        <button id="closeBtn">Fechar [ESC]</button>
       </div>
     </div>
 

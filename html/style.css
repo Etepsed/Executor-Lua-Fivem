@@ -1,7 +1,51 @@
+/* Tema padrão - usa :root */
+:root {
+  --cor_Background_Menu: #121212; /* Fundo quase preto */
+  --border_color: #1f1f1f; /* Borda sutil */
+  --button_hover_color: #1a1a1a; /* Hover mais escuro */
+  --button_color: #1c1c1c; /* Botão escuro */
+  --font_color: #d0d0d0; /* Texto cinza claro */
+
+  /* Extras opcionais */
+  --accent_color: #b00020; /* Vermelho escuro (erro, destaque) */
+  --secondary_color: #4fc3f7; /* Azul ciano (texto, destaque secundário) */
+}
+
+/* Tema Dark Blue */
+.theme-dark-blue {
+  --cor_Background_Menu: #0d1117;
+  --border_color: #21262d;
+  --button_hover_color: #30363d;
+  --button_color: #161b22;
+  --font_color: #c9d1d9;
+}
+
+/* Tema Light */
+.theme-light {
+  --cor_Background_Menu: #ffffff; /* Fundo branco puro */
+  --border_color: #dcdcdc; /* Cinza claro para bordas */
+  --button_hover_color: #f0f0f0; /* Hover cinza claro */
+  --button_color: #f9f9f9; /* Botão com leve tom de cinza */
+  --font_color: #1a1a1a; /* Texto preto suave */
+
+  /* Extras opcionais */
+  --accent_color: #d32f2f; /* Vermelho suave para erros/destaques */
+  --secondary_color: #1976d2;
+}
+
+/* Tema Copper */
+.theme-copper {
+  --cor_Background_Menu: #3e1f0d;
+  --border_color: #80461b;
+  --button_hover_color: #b65c2e;
+  --button_color: #5a2d16;
+  --font_color: #ffe9d6;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   font-family: monospace;
   display: none;
   align-items: center;
@@ -9,50 +53,59 @@ body {
   height: 100vh;
 }
 
-#closeBtn {
-  background-color: crimson;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  margin-top: 10px;
-  float: right;
-}
-
 .frame {
-  background-color: #1e1e1e;
-  border: 2px solid #888;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--cor_Background_Menu);
+  padding: 0.5rem;
   border-radius: 8px;
-  width: 600px;
-}
-
-textarea {
-  width: 100%;
-  height: 300px;
-  background-color: #252526;
-  color: #d4d4d4;
-  border: none;
-  padding: 10px;
-  font-size: 14px;
-  resize: none;
+  width: 900px;
 }
 
 .buttons {
-  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #0e639c;
+  background-color: var(--button_color);
   border: none;
-  color: white;
+  color: var(--font_color);
   cursor: pointer;
+  border: solid var(--border_color) 0.1rem;
   font-weight: bold;
+  border-radius: 0.3rem;
 }
 
 button:hover {
-  background-color: #1177bb;
+  background-color: var(--button_hover_color);
+}
+#editor {
+  height: 72vh;
+  width: 100%;
+  border: solid var(--border_color) 0.1rem;
+}
+.theme_selector {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: var(--button_color);
+  color: var(--font_color);
+  border: 1px solid var(--border_color);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme_selector:hover {
+  background-color: var(--button_hover_color);
+}
+
+.theme_selector:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 }

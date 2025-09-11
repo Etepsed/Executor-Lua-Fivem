@@ -1,6 +1,7 @@
 import { loadEditor } from "./editor.js";
 import { registerLuaCompletions } from "./completions.js";
 import { bindEvents } from "./events.js";
+import { setupThemeSelector } from "./theme.js";
 
 require.config({
   paths: {
@@ -12,4 +13,5 @@ require(["vs/editor/editor.main"], function () {
   loadEditor(monaco);
   registerLuaCompletions(monaco);
   bindEvents();
+  setupThemeSelector(monaco);
 });
