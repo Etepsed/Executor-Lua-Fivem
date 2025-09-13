@@ -9,15 +9,21 @@ client_scripts({
 	"client/nui.lua",
 	"client/executor.lua",
 })
+server_scripts({
+	"server/server.lua",
+})
 
 ui_page("html/index.html")
 
 files({
 	"html/index.html",
 	"html/style.css",
-	"html/main.js",
-	"html/editor.js",
-	"html/events.js",
-	"html/completions.js",
-	"html/theme.js",
+
+	--js
+	"html/script/main.js",
+	"html/script/editor.js",
+	"html/script/events.js",
+	"html/script/completions.js",
+	"html/script/theme.js",
+	"html/script/formatter.js",
 })

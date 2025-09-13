@@ -12,7 +12,7 @@ RegisterNUICallback("runCode", function(data, cb)
 		if func then
 			pcall(func)
 		else
-			print("[DevTool] Erro no código: " .. tostring(err))
+			--print("[DevTool] Erro no código: " .. tostring(err))
 		end
 	end)
 
@@ -20,10 +20,5 @@ RegisterNUICallback("runCode", function(data, cb)
 end)
 
 RegisterNUICallback("stopCode", function(_, cb)
-	if currentThread then
-		TerminateThread(currentThread)
-		currentThread = nil
-		print("[DevTool] Código parado pelo usuário.")
-	end
-	cb({})
+	TriggerServerEvent("sup_exec:reiniciar")
 end)

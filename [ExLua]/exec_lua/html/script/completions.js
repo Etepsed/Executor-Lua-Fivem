@@ -30,7 +30,7 @@ export function registerLuaCompletions(monaco) {
             documentation: "Cria uma declaração condicional `if-else`.",
           },
           {
-            label: "for-loop",
+            label: "for",
             kind: monaco.languages.CompletionItemKind.Keyword,
             insertText: "for ${1:i}=${2:1}, ${3:10} do\n\t$0\nend",
             insertTextRules:
@@ -180,12 +180,6 @@ export function registerLuaCompletions(monaco) {
             kind: monaco.languages.CompletionItemKind.Value,
             insertText: "false",
             documentation: "Valor booleano falso.",
-          },
-          {
-            label: "for",
-            kind: monaco.languages.CompletionItemKind.Keyword,
-            insertText: "for",
-            documentation: "Inicia um loop `for`.",
           },
 
           {

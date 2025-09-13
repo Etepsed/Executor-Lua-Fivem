@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dev Tool</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.44.0/min/vs/loader.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="top_bar">
+        <div class="buttons">
+          <button id="loadFileBtn">
+            <span class="material-icons"> file_open </span>
+          </button>
+
+          <button id="formatBtn">
+            <span class="material-icons">data_object</span>
+          </button>
+        </div>
+        <div class="buttons" style="justify-content: right">
+          <button id="clearBtn">
+            <span class="material-icons"> cleaning_services</span>
+          </button>
+          <select id="themeSelector" class="theme_selector">
+            <option value="default">Black (Padrão)</option>
+            <option value="theme-dark-blue">Dark Blue</option>
+            <option value="theme-light">Light</option>
+            <option value="theme-copper">Copper</option>
+          </select>
+
+          <button id="closeBtn">
+            <span class="material-icons"> close </span>
+          </button>
+        </div>
+      </div>
+
+      <div id="editor"></div>
+      <div class="buttons">
+        <button id="runBtn">
+          <span class="material-icons">play_arrow</span>
+        </button>
+        <button id="stopBtn">
+          <span class="material-icons">restart_alt</span>
+        </button>
+      </div>
+      <input
+        type="file"
+        id="fileInput"
+        accept=".lua,.txt"
+        style="display: none"
+      />
+    </div>
+
+    <script type="module" src="script/main.js"></script>
+  </body>
+</html>
