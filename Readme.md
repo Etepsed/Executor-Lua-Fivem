@@ -1,8 +1,19 @@
-adicione a pasta [ExLua] na pasta resources
+ExLua Resource
+This README provides instructions for setting up the [ExLua] resource in your FiveM server.
+Installation
 
-coloque no server.cfg
-bash\_\_\_
+Place the [ExLua] folder in your FiveM server's resources directory:
+resources/[ExLua]
+
+
+Add the following lines to your server.cfg:
 add_ace resource.sup_exec command.stop allow
 add_ace resource.sup_exec command.start allow
 add_ace resource.sup_exec command.ensure allow
 add_ace resource.sup_exec command.restart allow
+
+
+Ensure the resource is loaded by adding:
+ensure exec_lua
+ensure sup_exec
+
